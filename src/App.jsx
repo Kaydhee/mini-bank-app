@@ -61,52 +61,64 @@ function App() {
 	return (
 		<>
 			<header className='app'>
-				<h1>useReducer Bank Account</h1>
-				<p>Balance: {balance}</p>
-				<p>Loan: {loan}</p>
+				<section className='main'>
+					<h1>Loanded Bank Account</h1>
+					<div className='main_top'>
+						<p className='balance'>Balance: {balance}</p>
+						<p className='loan'>Loan: {loan}</p>
+					</div>
 
-				<p>
-					<button
-						onClick={() => dispatch({ type: 'openAccount' })}
-						disabled={isActive}>
-						Open account
-					</button>
-				</p>
-				<p>
-					<button
-						onClick={() => dispatch({ type: 'deposit', payload: 150 })}
-						disabled={!isActive}>
-						Deposit 150
-					</button>
-				</p>
-				<p>
-					<button
-						onClick={() => dispatch({ type: 'withdraw', payload: 50 })}
-						disabled={!isActive}>
-						Withdraw 50
-					</button>
-				</p>
-				<p>
-					<button
-						onClick={() => dispatch({ type: 'requestLoan', payload: 5000 })}
-						disabled={!isActive}>
-						Request a loan of 5000
-					</button>
-				</p>
-				<p>
-					<button
-						onClick={() => dispatch({ type: 'payLoan', payload: 5000 })}
-						disabled={!isActive}>
-						Pay loan
-					</button>
-				</p>
-				<p>
-					<button
-						onClick={() => dispatch({ type: 'closeAccount' })}
-						disabled={!isActive}>
-						Close account
-					</button>
-				</p>
+					<article className='cta'>
+						<p>
+							<button
+								className='btn'
+								onClick={() => dispatch({ type: 'openAccount' })}
+								disabled={isActive}>
+								Open account
+							</button>
+						</p>
+						<p>
+							<button
+								className='btn'
+								onClick={() => dispatch({ type: 'deposit', payload: 150 })}
+								disabled={!isActive}>
+								Deposit 150
+							</button>
+						</p>
+						<p>
+							<button
+								className='btn'
+								onClick={() => dispatch({ type: 'withdraw', payload: 50 })}
+								disabled={!isActive}>
+								Withdraw 50
+							</button>
+						</p>
+						<p>
+							<button
+								className='btn'
+								onClick={() => dispatch({ type: 'requestLoan', payload: 5000 })}
+								disabled={!isActive}>
+								Request a loan of 5000
+							</button>
+						</p>
+						<p>
+							<button
+								className='btn'
+								onClick={() => dispatch({ type: 'payLoan', payload: 5000 })}
+								disabled={!isActive}>
+								Pay loan
+							</button>
+						</p>
+						<p>
+							<button
+								className='btn'
+								onClick={() => dispatch({ type: 'closeAccount' })}
+								disabled={!isActive}>
+								Close account
+							</button>
+						</p>
+					</article>
+				</section>
 			</header>
 		</>
 	);
